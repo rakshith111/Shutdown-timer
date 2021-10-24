@@ -8,6 +8,9 @@
 ![image](https://user-images.githubusercontent.com/36219488/138157616-4ffc387a-0036-43a3-85df-c301b20955ed.png)
 ![image](https://user-images.githubusercontent.com/36219488/138157529-7a81e1cb-9676-4f22-9a81-ba64f7543189.png)
 
+![image](https://user-images.githubusercontent.com/36219488/138595234-30575475-ca08-4541-a589-c1576e7ec41a.png)
+
+
 
 ### [Releases](https://github.com/rakshith111/Shutdown-timer/releases) <br>
 <h3><details>
