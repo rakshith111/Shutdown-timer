@@ -13,12 +13,8 @@ def submit():
             hrs.set(int(0))
             minuits.set(int(0))
             seconds.set(int(0))
-            print("r")
-            print(Hrs_label.grid_info()) 
             extend_btn.grid(row=2,column=0,sticky='w')
             cancel_btn.grid(row=2,column=1,sticky='w')
-            print(cancel_btn.grid_info()) 
-            print(extend_btn.grid_info()) 
             countdown(root,final)
         
         else:
@@ -61,6 +57,4 @@ min_entry.grid(row=1,column=1)
 sec_label.grid(row=0,column=2)
 sec_entry.grid(row=1,column=2)
 sub_btn.grid(row=2,column=0,sticky='w')
-print(Hrs_label.grid_info())
-
 root.mainloop()
