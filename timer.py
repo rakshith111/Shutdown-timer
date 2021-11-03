@@ -1,7 +1,9 @@
-import time
+from time import sleep
 import tkinter as tk
 from tkinter import *
+import subprocess
 def countdown(root,time_sec):
+
     hour=StringVar()
     minute=StringVar()
     second=StringVar()
@@ -16,20 +18,21 @@ def countdown(root,time_sec):
     Mint_label.grid(row=6,column=1)
     Sect_label.grid(row=6,column=2)
     while time_sec:
-        mins, secs = divmod(time_sec, 60)
-        hours=0
-        if(mins>60):
-            hours,mins=divmod(mins, 60)
+        time_sec = time_sec - 1
+        seconds = (time_sec // 60) % 60
+        minutes = (time_sec // 3600)
+        hours = (time_sec // 10800)
         hour.set("{0:2d}".format(hours))
-        minute.set("{0:2d}".format(mins))
-        second.set("{0:2d}".format(secs))
+        minute.set("{0:2d}".format(minutes))
+        second.set("{0:2d}".format(seconds))
         hrwindo= Entry(root, width=3, font=('calibre',10, 'bold'),textvariable=hour)
         minwindo= Entry(root, width=3, font=('calibre',10, 'bold'),textvariable=minute)
         secondswino= Entry(root, width=3, font=('calibre',10, 'bold'),textvariable=second)
         hrwindo.grid(row=7,column=0)
         minwindo.grid(row=7,column=1)
         secondswino.grid(row=7,column=2)
- 
-        root.after(1000)
         root.update()
-        time_sec-=1
+
+        
+def screentimer():
+     subprocess.run(["powercfg", "-change", "-monitor-timeout-ac" ,"1"],  shell=True, stdout=subprocess.PIPE, stdin=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
